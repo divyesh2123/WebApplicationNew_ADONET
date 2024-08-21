@@ -4,6 +4,14 @@
     <table>
     @foreach(var t in Model)
     {
-        <tr><td>@t.Address</td> <td>@t.FirstName</td> <td>@t.LastName</td></tr>
+        <tr><td>@t.Address</td> <td>@t.FirstName</td> <td>@t.LastName</td>
+            
+         <td>  
+                @Html.ActionLink("Edit", "Edit", new { id=t.Id  }) |  
+                @Html.ActionLink("Details", "Details", new {  id=t.Id }) |  
+                @Html.ActionLink("Delete", "Delete", new {  id=t.Id  })  
+            </td>  
+        
+        </tr>
     }
     </table>
